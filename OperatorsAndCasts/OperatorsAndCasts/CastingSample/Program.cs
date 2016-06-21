@@ -30,6 +30,7 @@ namespace CastingSample
                 //    balance = (Currency)(-50.50);
                 //    WriteLine($"Result is {balance}");
                 //}
+                
 
                 uint balance3 = (uint)balance2;
 
