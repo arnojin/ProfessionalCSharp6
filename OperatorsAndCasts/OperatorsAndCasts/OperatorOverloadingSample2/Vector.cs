@@ -14,7 +14,7 @@ namespace OperatorOverloadingSample
 
         public Vector(Vector v)
         {
-            X = v.X;
+	        X = v.X;
             Y = v.Y;
             Z = v.Z;
         }
@@ -29,13 +29,13 @@ namespace OperatorOverloadingSample
             new Vector(left.X + right.X, left.Y + right.Y, left.Z + right.Z);
 
         public static Vector operator *(double left, Vector right) =>
-          new Vector(left * right.X, left * right.Y, left * right.Z);
+	        new Vector(left * right.X, left * right.Y, left * right.Z);
 
         public static Vector operator *(Vector left, double right) =>
-          right * left;
+	        right * left;
 
         public static double operator *(Vector left, Vector right) =>
-          left.X * right.X + left.Y * right.Y + left.Z * right.Z;
+	        left.X * right.X + left.Y * right.Y + left.Z * right.Z;
 
     }
 
