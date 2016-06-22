@@ -1,43 +1,20 @@
-sudo: false
-language: c++
-# dotnet cli require Ubuntu 14.04
+language: generic
 sudo: required
 dist: trusty
-solution: ./OperatorsAndCasts/OperatorsAndCasts/OperatorsAndCasts.sln
-os:
-  - linux
-env:
-  matrix:
-    - CLI_VERSION: Latest
-      Configuration: Debug
-      Framework: netcoreapp1.0
-    - CLI_VERSION: Latest
-      Configuration: Release
-      Framework: netcoreapp1.0
+
 addons:
   apt:
     packages:
     - gettext
-    - libcurl4-openssl-dev
-    - libssl-dev
-    - zlib1g
-    - libstdc++6
-install:
-  - sudo sh -c 'echo "deb [arch=amd64] https://apt-mo.trafficmanager.net/repos/dotnet/ trusty main" > /etc/apt/sources.list.d/dotnetdev.list'
-  - sudo apt-key adv --keyserver apt-mo.trafficmanager.net --recv-keys 417A0893
-  - sudo apt-get update
-  - cd
-  - mkdir dn_cli
-  - cd dn_cli
-  - wget http://launchpadlibrarian.net/217261845/libicu52_52.1-8ubuntu0.2_amd64.deb
-  - sudo dpkg -i libicu52_52.1-8ubuntu0.2_amd64.deb
-  - wget https://dotnetcli.blob.core.windows.net/dotnet/preview/Installers/Latest/dotnet-host-ubuntu-x64.latest.deb
-  - sudo dpkg -i dotnet-host-ubuntu-x64.latest.deb
-  - wget https://dotnetcli.blob.core.windows.net/dotnet/preview/Installers/Latest/dotnet-hostfxr-ubuntu-x64.latest.deb
-  - sudo dpkg -i dotnet-hostfxr-ubuntu-x64.latest.deb
-  - wget https://dotnetcli.blob.core.windows.net/dotnet/preview/Installers/Latest/dotnet-sharedframework-ubuntu-x64.latest.deb
-  - sudo dpkg -i dotnet-sharedframework-ubuntu-x64.latest.deb
-  - wget https://dotnetcli.blob.core.windows.net/dotnet/preview/Installers/Latest/dotnet-sdk-ubuntu-x64.latest.deb
-  - sudo dpkg -i dotnet-sdk-ubuntu-x64.latest.deb
+    - libunwind8
+    - libicu52
+    - dbus
+
+before_install:
+  - export DOTNET_INSTALL_DIR="~/cli"
+  - curl -sSL https://raw.githubusercontent.com/dotnet/cli/rel/1.0.0/scripts/obtain/dotnet-install.sh | bash /dev/stdin --channel preview --install-dir ~/cli
+  - export PATH="$DOTNET_INSTALL_DIR:$PATH"
+
+script:
 script:
   cd OperatorsAndCasts/OperatorsAndCasts/ && dotnet restore && dotnet run
