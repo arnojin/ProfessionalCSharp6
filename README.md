@@ -1,3 +1,5 @@
+[Travis CI](https://travis-ci.org/arnojin/ProfessionalCSharp6.svg?branch=master)
+
 # ProfessionalCSharp6
 
 Code samples for the Wrox book Professional C# 6 and .NET Core 1.0
