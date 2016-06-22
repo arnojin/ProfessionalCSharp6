@@ -1,0 +1,16 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": ".NET Core Launch (console)",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build",
+            "program": "${workspaceRoot}/Delegates/DelegatesAndEventsSamples/SimpleDelegates/bin/Debug/net46/SimpleDelegates.exe",
+            "args": [],
+            "cwd": "${workspaceRoot}",
+            "stopAtEntry": true,
+            "externalConsole": false
+        }
+    ]
+}
