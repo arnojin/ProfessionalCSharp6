@@ -8,7 +8,6 @@ addons:
     - gettext
     - libcurl4-openssl-dev
     - libssl-dev
-    - libunwind8
     - zlib1g
     - libstdc++6
 install:
