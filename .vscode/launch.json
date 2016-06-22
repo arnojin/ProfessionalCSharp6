@@ -8,7 +8,7 @@
             "preLaunchTask": "build",
             "program": "${workspaceRoot}/Delegates/DelegatesAndEventsSamples/SimpleDelegates/bin/Debug/net46/SimpleDelegates.exe",
             "args": [],
-            "cwd": "${workspaceRoot}",
+            "cwd": "${workspaceRoot}/Delegates/DelegatesAndEventsSamples/SimpleDelegates/bin/Debug/net46/",
             "stopAtEntry": true,
             "externalConsole": false
         }

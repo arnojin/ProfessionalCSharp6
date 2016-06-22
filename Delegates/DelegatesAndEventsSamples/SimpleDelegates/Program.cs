@@ -27,7 +27,7 @@ namespace Wrox.ProCSharp.Delegates
         static void ProcessAndDisplayNumber(DoubleOp action, double value)
         {
             double result = action(value);
-            WriteLine($"Value is {value}, result of operation is {result}");
+            WriteLine($"Value is {value}, result of operation is {result} 。");
         }
     }
 }
