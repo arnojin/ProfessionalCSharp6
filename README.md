@@ -1,4 +1,4 @@
-[Travis CI](https://travis-ci.org/arnojin/ProfessionalCSharp6.svg?branch=master)
+[![Travis CI](https://travis-ci.org/arnojin/ProfessionalCSharp6.svg?branch=master)](https://travis-ci.org/arnojin/ProfessionalCSharp6)
 
 # ProfessionalCSharp6
 

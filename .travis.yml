@@ -1,7 +1,19 @@
-language: csharp
+sudo: false
+language: c++
+# dotnet cli require Ubuntu 14.04
+sudo: required
+dist: trusty
 solution: ./OperatorsAndCasts/OperatorsAndCasts/OperatorsAndCasts.sln
 os:
   - linux
+env:
+  matrix:
+    - CLI_VERSION: Latest
+      Configuration: Debug
+      Framework: netcoreapp1.0
+    - CLI_VERSION: Latest
+      Configuration: Release
+      Framework: netcoreapp1.0
 addons:
   apt:
     packages:
@@ -21,7 +33,11 @@ install:
   - sudo dpkg -i libicu52_52.1-8ubuntu0.2_amd64.deb
   - wget https://dotnetcli.blob.core.windows.net/dotnet/preview/Installers/Latest/dotnet-host-ubuntu-x64.latest.deb
   - sudo dpkg -i dotnet-host-ubuntu-x64.latest.deb
+  - wget https://dotnetcli.blob.core.windows.net/dotnet/preview/Installers/Latest/dotnet-hostfxr-ubuntu-x64.latest.deb
+  - sudo dpkg -i dotnet-hostfxr-ubuntu-x64.latest.deb
   - wget https://dotnetcli.blob.core.windows.net/dotnet/preview/Installers/Latest/dotnet-sharedframework-ubuntu-x64.latest.deb
   - sudo dpkg -i dotnet-sharedframework-ubuntu-x64.latest.deb
   - wget https://dotnetcli.blob.core.windows.net/dotnet/preview/Installers/Latest/dotnet-sdk-ubuntu-x64.latest.deb
   - sudo dpkg -i dotnet-sdk-ubuntu-x64.latest.deb
+script:
+  cd OperatorsAndCasts/OperatorsAndCasts/ && dotnet restore && dotnet run
