@@ -16,5 +16,5 @@ before_install:
   - export PATH="$DOTNET_INSTALL_DIR:$PATH"
 
 script:
-script:
-  cd OperatorsAndCasts/OperatorsAndCasts/ && dotnet restore && dotnet run
+  dotnet info
+  cd OperatorsAndCasts/OperatorsAndCasts/CastingSample && dotnet restore && dotnet run
