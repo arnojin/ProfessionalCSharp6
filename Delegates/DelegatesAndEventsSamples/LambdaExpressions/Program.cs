@@ -8,13 +8,24 @@ namespace Wrox.ProCSharp.Delegates
   {
     static void Main()
     {
-      // SimpleDemos();
+      SimpleDemos();
 
-      // Closure1();
+      Closure1();
       ClosureForEach();
+
+      MultiType();
     }
 
-
+    static void MultiType()
+    {
+      Func<int, string, bool> multiType = (a,b) => 
+      {
+        bool c = false;
+        WriteLine($"a:{a} b:{b} c:{c}");
+        return c;
+      };
+      WriteLine($"multiType return {multiType(123, "abc")}");
+    }
     static void SimpleDemos()
     {
       Func<string, string> oneParam = s => $"change uppercase {s.ToUpper()}";
