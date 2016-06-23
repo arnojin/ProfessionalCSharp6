@@ -26,21 +26,27 @@ namespace ListSamples
 
             // accessing elements
 
+            WriteLine($"racers.Count = {racers.Count}");
             for (int i = 0; i < racers.Count; i++)
             {
                 WriteLine(racers[i]);
             }
-
+            WriteLine();
             foreach (var r in racers)
             {
                 WriteLine(r);
             }
-
+            WriteLine();
             // searching
             int index1 = racers.IndexOf(mario);
             int index2 = racers.FindIndex(new FindCountry("Finland").FindCountryPredicate);
             int index3 = racers.FindIndex(r => r.Country == "Finland");
+            WriteLine($"index1 = {index1}, index2 = {index2}, index3 = {index3}");
+
             Racer racer = racers.Find(r => r.FirstName == "Niki");
+            WriteLine($"{racer:A}");
+            
+            WriteLine();
             List<Racer> bigWinners = racers.FindAll(r => r.Wins > 20);
             foreach (Racer r in bigWinners)
             {
@@ -56,7 +62,10 @@ namespace ListSamples
             {
                 WriteLine("object not found in collection");
             }
-
+            if (!racers.Remove(graham))
+            {
+                WriteLine("object not found in collection");
+            }
 
 
             var racers2 = new List<Racer>(new Racer[] {
