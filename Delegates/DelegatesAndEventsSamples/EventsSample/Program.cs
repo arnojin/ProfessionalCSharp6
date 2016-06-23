@@ -8,16 +8,15 @@
 
       var daniel = new Consumer("Daniel");
       dealer.NewCarInfo += daniel.NewCarIsHere;
-
       dealer.NewCar("Mercedes");
+      System.Console.WriteLine("---");
 
       var sebastian = new Consumer("Sebastian");
       dealer.NewCarInfo += sebastian.NewCarIsHere;
-
       dealer.NewCar("Ferrari");
+      System.Console.WriteLine("---");
 
       dealer.NewCarInfo -= sebastian.NewCarIsHere;
-
 
       dealer.NewCar("Red Bull Racing");
     }
