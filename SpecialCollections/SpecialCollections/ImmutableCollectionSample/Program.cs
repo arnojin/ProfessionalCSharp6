@@ -11,8 +11,10 @@ namespace ImmutableCollectionSample
         static void Main()
         {
             SimpleArrayDemo();
+            
             ImmutableList<Account> accounts = CreateImmutableList();
             UsingABuilder(accounts);
+            
             LinqDemo();
 
             ReadLine();
@@ -21,7 +23,11 @@ namespace ImmutableCollectionSample
         public static void LinqDemo()
         {
             ImmutableArray<string> arr = ImmutableArray.Create<string>("one", "two", "three", "four", "five");
-            var result = arr.Where(s => s.StartsWith("t"));
+            var results = arr.Where(s => s.StartsWith("t"));
+            foreach(var result in results)
+            {
+                WriteLine(result);
+            }
         }
 
         public static void UsingABuilder(ImmutableList<Account> immutableAccounts)
@@ -39,6 +45,7 @@ namespace ImmutableCollectionSample
             ImmutableList<Account> overdrawnAccounts = builder.ToImmutable();
 
             overdrawnAccounts.ForEach(a => WriteLine($"{a.Name} {a.Amount}"));
+            WriteLine();
         }
 
         public static ImmutableList<Account> CreateImmutableList()
@@ -56,8 +63,12 @@ namespace ImmutableCollectionSample
                 WriteLine($"{account.Name} {account.Amount}");
             }
 
-            immutableAccounts.ForEach(a => WriteLine($"{a.Name} {a.Amount}"));
+            WriteLine();
 
+            immutableAccounts.ForEach(a => WriteLine($"{a.Name} {a.Amount}"));
+            
+            WriteLine();
+            
             return immutableAccounts;
         }
 
