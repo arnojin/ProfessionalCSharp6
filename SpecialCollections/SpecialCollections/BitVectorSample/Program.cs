@@ -41,12 +41,12 @@ namespace BitVectorSample
             BitVector32.Section sectionE = BitVector32.CreateSection(0x7, sectionD);
             BitVector32.Section sectionF = BitVector32.CreateSection(0x3, sectionE);
 
-            WriteLine($"Section A: {IntToBinaryString(bits2[sectionA], true)}");
-            WriteLine($"Section B: {IntToBinaryString(bits2[sectionB], true)}");
-            WriteLine($"Section C: {IntToBinaryString(bits2[sectionC], true)}");
-            WriteLine($"Section D: {IntToBinaryString(bits2[sectionD], true)}");
-            WriteLine($"Section E: {IntToBinaryString(bits2[sectionE], true)}");
-            WriteLine($"Section F: {IntToBinaryString(bits2[sectionF], true)}");
+            WriteLine($"Section A: {IntToBinaryString(bits2[sectionA], false)}");
+            WriteLine($"Section B: {IntToBinaryString(bits2[sectionB], false)}");
+            WriteLine($"Section C: {IntToBinaryString(bits2[sectionC], false)}");
+            WriteLine($"Section D: {IntToBinaryString(bits2[sectionD], false)}");
+            WriteLine($"Section E: {IntToBinaryString(bits2[sectionE], false)}");
+            WriteLine($"Section F: {IntToBinaryString(bits2[sectionF], false)}");
 
 
             ReadLine();
