@@ -25,12 +25,12 @@ namespace EnumerableSample
         static void Main()
         {
             // uncomment the corresponding method call as reading through the LINQ chapter
-            Filtering();
+            // Filtering();
             // IndexFiltering();
             // TypeFiltering();
             // CompoundFrom();
             // Sorting();
-            // Grouping4();
+            Grouping4();
             // GroupingWithNestedObjects();
             // InnerJoin();
             // LeftOuterJoin();
