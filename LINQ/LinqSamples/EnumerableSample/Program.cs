@@ -30,9 +30,9 @@ namespace EnumerableSample
             // TypeFiltering();
             // CompoundFrom();
             // Sorting();
-            Grouping4();
+            // Grouping4();
             // GroupingWithNestedObjects();
-            // InnerJoin();
+            InnerJoin();
             // LeftOuterJoin();
             // GroupJoin2();
             // SetOperations();
