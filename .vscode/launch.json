@@ -6,10 +6,10 @@
             "type": "coreclr",
             "request": "launch",
             "preLaunchTask": "build",
-            "program": "${workspaceRoot}/Delegates/DelegatesAndEventsSamples/SimpleDelegates/bin/Debug/net46/SimpleDelegates.exe",
+            "program": "${workspaceRoot}/Delegates/DelegatesAndEventsSamples/SimpleDelegates/bin/Debug/netcoreapp1.0/SimpleDelegates.dll",
             "args": [],
-            "cwd": "${workspaceRoot}/Delegates/DelegatesAndEventsSamples/SimpleDelegates/bin/Debug/net46/",
-            "stopAtEntry": true,
+            "cwd": "${workspaceRoot}/Delegates/DelegatesAndEventsSamples/SimpleDelegates/bin/Debug/netcoreapp1.0/",
+            "stopAtEntry": false,
             "externalConsole": false
         }
     ]
